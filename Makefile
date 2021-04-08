@@ -7,7 +7,7 @@ BINARY_NAME=gomux
 all: test build
 
 test:
-      $(GOTEST) ./... -v
+	$(GOTEST) ./... -v
 
 build:
-      $(GOBUILD) -o $(BINARY_NAME) -v
+	$(GOBUILD) -o $(BINARY_NAME) -v
