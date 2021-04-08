@@ -3,9 +3,9 @@ os: linux
 language: go
 
 env: 
-  - APP_DB_NAME = postgres
-  - APP_DB_USERNAME = postgres
-  - APP_DB_PASSWORD =
+  - APP_DB_NAME=postgres
+  - APP_DB_USERNAME=postgres
+  - APP_DB_PASSWORD=''
 
 go: 
   - 1.14.x
@@ -15,5 +15,6 @@ services:
   - docker
 
 script: 
+  - sem-service start postgres
   - go test -v
 
