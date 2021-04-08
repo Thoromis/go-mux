@@ -10,5 +10,4 @@ services:
   - docker
 
 script: 
-  - go test -v ./...
-
+  - make all
