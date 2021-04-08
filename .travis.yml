@@ -2,13 +2,8 @@ os: linux
 
 language: go
 
-env: 
-  - APP_DB_NAME=postgres
-  - APP_DB_USERNAME=postgres
-  - APP_DB_PASSWORD=
-
 go: 
-  - 1.14.x
+  - 1.14
 
 services: 
   - postgresql
