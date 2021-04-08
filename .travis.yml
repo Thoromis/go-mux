@@ -10,4 +10,5 @@ services:
   - docker
 
 script: 
-  - make all
+  - make test 
+  - make build

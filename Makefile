@@ -1,9 +1,8 @@
-GOCMD=go
-GOBUILD=$(GOCMD) build
-GOCLEAN=$(GOCMD) clean
-GOTEST=$(GOCMD) test
-GOGET=$(GOCMD) get
-BINARY_NAME=simple_service
+GOBUILD=go build
+GOCLEAN=go clean
+GOTEST=go test
+GOGET=go get
+BINARY_NAME=gomux
 
 all: test build
 
