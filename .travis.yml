@@ -16,5 +16,5 @@ services:
 
 script: 
   - sem-service start postgres
-  - go test -v
+  - go test -v ./...
 
