@@ -13,7 +13,7 @@ COPY main.go /src/
 RUN ls -laht
 
 # Build the GO app as myapp binary and move it to /usr/
-RUN CGO_ENABLED=0 go build -o /usr/gomux-maier
+RUN CGO_ENABLED=0 go build -o /usr/gomux
 
 #Expose port 8888
 EXPOSE 8888
