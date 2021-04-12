@@ -18,5 +18,5 @@ RUN ls -laht
 EXPOSE 8888
 
 # Run the service myapp when a container of this image is launched
-CMD ["gomux"]
+CMD ["/src/gomux"]
 
