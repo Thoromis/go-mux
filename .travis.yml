@@ -12,3 +12,10 @@ services:
 script: 
   - make test 
   - make build
+  - echo "$REGISTRY_PASSWORD" | docker login --username $REGISTRY_USER --password-stdin
+  - docker build -f Dockerfile -t thoromis/gomux:latest ./
+  - GIT_SHA="$(git rev-parse --short HEAD)"
+  - docker tag thoromis/gomux:latest thoromis/gomux:$GIT_SHA
+  - docker push thoromis/gomux:latest
+  - docker push thoromis/gomux:$GIT_SHA
+
