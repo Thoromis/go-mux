@@ -10,7 +10,8 @@ WORKDIR /src
 COPY Makefile *.go go.* /src/
 
 # List items in the working directory (ls)
-RUN ls -laht | make build
+RUN ls -laht 
+CMD make build
 
 #Expose port 8888
 EXPOSE 8888
