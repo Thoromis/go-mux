@@ -17,5 +17,5 @@ CMD make build
 EXPOSE 8888
 
 # Run the service myapp when a container of this image is launched
-CMD ["/usr/gomux"]
+CMD ["gomux"]
 
