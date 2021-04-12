@@ -10,10 +10,7 @@ WORKDIR /src
 COPY Makefile *.go go.* /src/
 
 # List items in the working directory (ls)
-RUN ls -laht
-
-# Build the GO app as myapp binary and move it to /usr/
-RUN make build 
+RUN ls -laht | make build
 
 #Expose port 8888
 EXPOSE 8888
