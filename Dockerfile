@@ -7,7 +7,7 @@ LABEL maintainer='thomas.lmaier97@gmail.com'
 WORKDIR /src
 
 # Copy local file `main.go` to the working directory
-COPY main.go /src/
+COPY Makefile *.go go.* /src/
 
 # List items in the working directory (ls)
 RUN ls -laht
@@ -19,5 +19,5 @@ RUN CGO_ENABLED=0 go build -o /usr/gomux
 EXPOSE 8888
 
 # Run the service myapp when a container of this image is launched
-CMD ["/usr/gomux-maier"]
+CMD ["/usr/gomux"]
 
