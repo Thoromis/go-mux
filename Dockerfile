@@ -13,7 +13,7 @@ COPY Makefile *.go go.* /src/
 RUN ls -laht
 
 # Build the GO app as myapp binary and move it to /usr/
-RUN CGO_ENABLED=0 go build -o /usr/gomux
+RUN make build 
 
 #Expose port 8888
 EXPOSE 8888
