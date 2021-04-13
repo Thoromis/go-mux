@@ -1,22 +1,17 @@
-FROM golang:1.11-alpine
+FROM golang:1.16.3
 
-# Set maintainer label: maintainer=[thomas.lmaier97@gmail.com]
 LABEL maintainer='thomas.lmaier97@gmail.com'
 
-# Set working directory: `/src`
 WORKDIR /src
 
-# Copy local file `main.go` to the working directory
-COPY Makefile *.go go.* /src/
+COPY go.* /src/
+COPY *.go /src/
+COPY Makefile /src/
 
-# List items in the working directory (ls)
-RUN ls -laht 
-CMD make build
+RUN ls -laht
+RUN CGO_ENABLED=0 go build -o /src/gomux
 RUN ls -laht
 
-#Expose port 8888
-EXPOSE 8888
+EXPOSE 8010
 
-# Run the service myapp when a container of this image is launched
 CMD ["/src/gomux"]
-
